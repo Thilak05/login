@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="res\69440-531102132.mp4" type="video/mp4">
+        <!-- You can add additional source elements for different video formats -->
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Access Your Account</div>
+            <div class="title signup">Create a New Account</div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <form action="/signin" method="post" class="login">
+                    <div class="field">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="pass-link"><a href="#">Forgot your password?</a></div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="signup-link">New here? <a href="">Create an Account</a></div>
+                </form>
+                <form action="/signup" method="post" class="signup">
+                    <div class="field">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="pass" placeholder="Password" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="cpass" placeholder="Confirm password" required>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Signup">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
